@@ -99,7 +99,7 @@ ORDER BY stay;
 
 ## 🧰 Tools Used
 - **PostgreSQL** for data querying and analysis  
-- SQL functions: `AVG()`, `COUNT()`, `CORR()`, `ROUND()`, `CAST()`  
+- SQL functions: `AVG()`, `COUNT()`, `CORR()`, `ROUND()`
 - Data source: 2018 Japanese International University mental health survey  
 
 ---
