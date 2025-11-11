@@ -34,6 +34,11 @@ SELECT inter_dom,
 FROM students
 GROUP BY inter_dom;
 ```
+### Student Type Insights
+- **Acculturative Stress:** International students show **much higher acculturative stress** (avg 75.56) compared to domestic students (avg 62.84). This indicates that adapting to a new culture is a significant challenge and can contribute to mental health difficulties.  
+- **Depression Levels:** Surprisingly, international students have slightly **lower average depression scores** (8.04) than domestic students (8.61). This may suggest that while cultural adjustment is stressful, international students might have coping strategies or resilience factors that mitigate depression.  
+- **Social Connectedness:** Both groups report similar social connectedness (around 37), suggesting that social integration does not differ significantly between domestic and international students, despite stress differences.
+
 ### 2️⃣ Comparison by Gender
 ```sql
 SELECT gender,
@@ -43,6 +48,12 @@ SELECT gender,
 FROM students
 GROUP BY gender;
 ```
+### Gender Insights
+- **Depression:** Female students report higher depression (avg 8.40) compared to males (avg 7.82).  
+- **Acculturative Stress:** Female students also report higher stress (74.31 vs 69.04), indicating they may experience the adjustment challenges more intensely.  
+- **Social Connectedness:** Male students report slightly higher social connectedness (38.19 vs 37.06), suggesting social networks may partially buffer stress and depression in male students.  
+- **Interpretation:** Gender-specific interventions could help address these differences, especially for female students who may need more targeted mental health support.
+
 ### 3️⃣ Correlation Analysis
 ```sql
 SELECT 
@@ -51,6 +62,10 @@ SELECT
 FROM students
 WHERE inter_dom = 'Inter';
 ```
+### Correlation Insights
+- **Depression & Acculturative Stress (r = +0.41):** A moderate positive correlation shows that students experiencing higher acculturative stress tend to have higher depression scores. This supports the idea that cultural adjustment is a key predictor of mental health difficulties.  
+- **Depression & Social Connectedness (r = -0.54):** A moderate negative correlation indicates that higher social connectedness is associated with lower depression. Building strong social networks is therefore protective for student mental health.
+
 ### 4️⃣ Length of Stay Analysis
 ```sql
 SELECT stay,
@@ -63,30 +78,12 @@ WHERE inter_dom = 'Inter'
 GROUP BY stay
 ORDER BY stay;
 ```
-## 💡 Insights
-
-### Student Type Insights
-- **Acculturative Stress:** International students show **much higher acculturative stress** (avg 75.56) compared to domestic students (avg 62.84). This indicates that adapting to a new culture is a significant challenge and can contribute to mental health difficulties.  
-- **Depression Levels:** Surprisingly, international students have slightly **lower average depression scores** (8.04) than domestic students (8.61). This may suggest that while cultural adjustment is stressful, international students might have coping strategies or resilience factors that mitigate depression.  
-- **Social Connectedness:** Both groups report similar social connectedness (around 37), suggesting that social integration does not differ significantly between domestic and international students, despite stress differences.
-
-### Gender Insights
-- **Depression:** Female students report higher depression (avg 8.40) compared to males (avg 7.82).  
-- **Acculturative Stress:** Female students also report higher stress (74.31 vs 69.04), indicating they may experience the adjustment challenges more intensely.  
-- **Social Connectedness:** Male students report slightly higher social connectedness (38.19 vs 37.06), suggesting social networks may partially buffer stress and depression in male students.  
-- **Interpretation:** Gender-specific interventions could help address these differences, especially for female students who may need more targeted mental health support.
-
-### Correlation Insights
-- **Depression & Acculturative Stress (r = +0.41):** A moderate positive correlation shows that students experiencing higher acculturative stress tend to have higher depression scores. This supports the idea that cultural adjustment is a key predictor of mental health difficulties.  
-- **Depression & Social Connectedness (r = -0.54):** A moderate negative correlation indicates that higher social connectedness is associated with lower depression. Building strong social networks is therefore protective for student mental health.
-
 ### Length of Stay Insights
 - **Early Years (1–3 years):** Depression and stress are highest in years 2–3 (avg depression 8.58–8.87, avg stress 71–75), indicating that the **initial adaptation phase is the most challenging**. Students may still be adjusting to the culture, academic expectations, and social environment.  
 - **Mid to Later Years (4–6 years):** Social connectedness dips around year 4 (avg 35), while stress peaks in some small samples (up to 89). This may reflect academic pressures or isolation as students progress.  
 - **Longer Stays:** Years 6–10 show inconsistent results due to very small sample sizes. However, some students report higher social connectedness (up to 48), suggesting that longer adaptation can improve social integration and reduce stress for some individuals.  
 - **Takeaway:** The **length of stay impacts stress and depression**, but individual experience varies; social support and integration are key factors in long-term mental health outcomes.
-
-
+  
 ---
 
 ## 📈 Key Takeaways
